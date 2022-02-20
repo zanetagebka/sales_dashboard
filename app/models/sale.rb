@@ -7,7 +7,7 @@ class Sale < ApplicationRecord
     product.purchase_price * quantity
   end
 
-  def calculate_profit
+  def profit
     revenue - cost
   end
 end
