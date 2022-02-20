@@ -1,0 +1,11 @@
+<div data-controller="chart">
+  <div data-chart-target="chart"></div>
+  <div class="shadow-lg rounded-lg overflow-hidden" id="sales">
+    <% @sales.each do |sale| %>
+      <%= tag.div id: dom_id(sale), data: {
+        chart_target: "sale",
+        date: sale.date,
+        revenue: sale.revenue } %>
+    <% end %>
+  </div>
+</div>

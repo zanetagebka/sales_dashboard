@@ -1,0 +1,2 @@
+<p>total cost: <%= number_to_currency(@sales.map(&:cost).inject(0, :+), unit: 'Kč', format: "%n %u") %></p>
+<p>total profit: <%= number_to_currency(@sales.map(&:calculate_profit).inject(0, :+), unit: 'Kč', format: "%n %u") %></p>

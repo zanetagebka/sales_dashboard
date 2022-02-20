@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_id: one
+  date: 2022-02-20
+  quantity: 1
+  revenue: 1
+
+two:
+  product_id: two
+  date: 2022-02-20
+  quantity: 1
+  revenue: 1
