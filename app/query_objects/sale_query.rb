@@ -3,7 +3,7 @@ class SaleQuery
 
   class << self
     def get_sales_from_scope_week(end_date)
-      current_time = end_date.to_date
+      current_time = end_date&.to_date
       return if current_time.blank?
 
       self.new(Sale.all).call(
