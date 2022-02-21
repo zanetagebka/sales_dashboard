@@ -1,15 +1,31 @@
 <div class="relative flex flex-wrap items-center text-center justify-center">
   <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Total cost</h5>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Total cost from scoped week</h5>
     <p class="text-gray-700 text-base mb-4">
-      <%= cost_to_currency %>
+      <%= scope_cost_to_currency %>
     </p>
   </div>
 
   <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Total Profit</h5>
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Total Profit from scoped week</h5>
     <p class="text-gray-700 text-base mb-4">
-      <%= profit_to_currency %>
+      <%= scope_profit_to_currency %>
+    </p>
+  </div>
+</div>
+
+<div class="relative flex flex-wrap items-center text-center justify-center">
+  <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Total Profit from last week</h5>
+    <p class="text-gray-700 text-base mb-4">
+      <%= current_week_cost_to_currency %>
+    </p>
+  </div>
+
+  <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
+    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Total Profit from last week</h5>
+    <p class="text-gray-700 text-base mb-4">
+      <%= current_week_profit_to_currency %>
     </p>
   </div>
 </div>
