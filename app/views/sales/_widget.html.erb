@@ -1,31 +1,13 @@
-<div class="relative flex flex-wrap items-center text-center justify-center">
-  <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Total cost from scoped week</h5>
-    <p class="text-gray-700 text-base mb-4">
-      <%= scope_cost_to_currency %>
-    </p>
-  </div>
+<% unless params[:end_date].nil? %>
+  <div class="relative flex flex-wrap items-center text-center justify-center">
+    <%= render partial: 'shared/centered_card', locals: { header: 'Total cost from scoped week', content: scope_cost_to_currency } %>
 
-  <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Total Profit from scoped week</h5>
-    <p class="text-gray-700 text-base mb-4">
-      <%= scope_profit_to_currency %>
-    </p>
+    <%= render partial: 'shared/centered_card', locals: { header: 'Total Profit from scoped week', content: scope_profit_to_currency } %>
   </div>
-</div>
+<% end %>
 
 <div class="relative flex flex-wrap items-center text-center justify-center">
-  <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Total Profit from last week</h5>
-    <p class="text-gray-700 text-base mb-4">
-      <%= current_week_cost_to_currency %>
-    </p>
-  </div>
+  <%= render partial: 'shared/centered_card', locals: { header: 'Total Profit from last week', content: current_week_cost_to_currency } %>
 
-  <div class="block p-6 rounded-lg shadow-lg bg-white max-w-sm">
-    <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">Total Profit from last week</h5>
-    <p class="text-gray-700 text-base mb-4">
-      <%= current_week_profit_to_currency %>
-    </p>
-  </div>
+  <%= render partial: 'shared/centered_card', locals: { header: 'Total Profit from last week', content: current_week_profit_to_currency } %>
 </div>

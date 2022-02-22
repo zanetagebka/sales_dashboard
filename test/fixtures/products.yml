@@ -3,9 +3,9 @@
 one:
   name: MyString
   purchase_price: 1
-  internal_id: 1
+  external_id: 1
 
 two:
   name: MyString
   purchase_price: 1
-  internal_id: 1
+  external_id: 1

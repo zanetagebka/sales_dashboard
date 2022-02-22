@@ -14,7 +14,7 @@ class ProductsTest < ApplicationSystemTestCase
     visit products_url
     click_on "New product"
 
-    fill_in "Internal", with: @product.internal_id
+    fill_in "Internal", with: @product.external_id
     fill_in "Name", with: @product.name
     fill_in "Purchase price", with: @product.purchase_price
     click_on "Create Product"
@@ -27,7 +27,7 @@ class ProductsTest < ApplicationSystemTestCase
     visit product_url(@product)
     click_on "Edit this product", match: :first
 
-    fill_in "Internal", with: @product.internal_id
+    fill_in "Internal", with: @product.external_id
     fill_in "Name", with: @product.name
     fill_in "Purchase price", with: @product.purchase_price
     click_on "Update Product"
